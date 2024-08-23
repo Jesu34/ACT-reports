@@ -1,0 +1,405 @@
+/* Variables de color */
+:root {
+    --primary-color: #35424a;
+    --secondary-color: #e8491d;
+    --light-color: #f4f4f4;
+    --dark-color: #333;
+    --white-color: #ffffff;
+    --grey-color: #ddd;
+    --light-shadow: rgba(0, 0, 0, 0.1);
+    --dark-shadow: rgba(0, 0, 0, 0.2);
+    --edit-color: #f39c12;
+    --delete-color: #e74c3c;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+.container {
+    max-width: 1200px;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Estilos del encabezado */
+header {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: var(--secondary-color) 3px solid;
+}
+
+header a {
+    color: var(--white-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+
+/* Estilos de la sección hero */
+.hero {
+    min-height: 400px;
+    background: url('coal-mine.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.hero h1 {
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* Estilos para el contenido dinámico */
+.dynamic-content {
+    margin: 20px 0;
+    padding: 20px;
+    background: var(--white-color);
+    box-shadow: 0 0 10px var(--light-shadow);
+}
+
+/* Estilos para el formulario de contacto */
+.contact {
+    padding: 20px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    margin-top: 20px;
+}
+
+.contact h2 {
+    text-align: center;
+}
+
+#contactForm {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#contactForm input[type="email"] {
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#contactForm button {
+    padding: 10px 20px;
+    background: var(--secondary-color);
+    color: var(--white-color);
+    border: none;
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    background: #ff6a00;
+}
+
+/* Estilos del pie de página */
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+/* Formularios */
+form {
+    background-color: var(--white-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--light-shadow);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--grey-color);
+    border-radius: 4px;
+}
+
+form button {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+/* Formularios de inicio de sesión y registro */
+/* .login-form, .register-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--dark-shadow);
+    max-width: 400px;
+    margin: 2rem auto;
+} */
+
+/* Tablas */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white-color);
+    box-shadow: 0 2px 4px var(--light-shadow);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--grey-color);
+}
+
+th {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+/* Botones de acción en las tablas */
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.action-buttons button {
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-btn {
+    background-color: var(--edit-color);
+    color: var(--white-color);
+}
+
+.delete-btn {
+    background-color: var(--delete-color);
+    color: var(--white-color);
+}
+
+.edit-btn:hover {
+    background-color: #d68910;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Dashboard y otras secciones */
+.section {
+    background-color: var(--white-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--light-shadow);
+    margin-bottom: 2rem;
+}
+
+.summary, .widget-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.widget, .summary-card {
+    background-color: var(--white-color);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--light-shadow);
+    text-align: center;
+}
+
+.widget h3, .summary-card h3 {
+    margin-top: 0;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.widget p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--dark-color);
+    margin: 0.5rem 0;
+}
+
+.recent-reports {
+    margin-top: 2rem;
+}
+
+.recent-reports h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+#recentReportsTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#recentReportsTable th,
+#recentReportsTable td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--grey-color);
+}
+
+#recentReportsTable th {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+#recentReportsTable tr:nth-child(even) {
+    background-color: var(--light-color);
+}
+
+#recentReportsTable tr:hover {
+    background-color: var(--grey-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .summary, .widget-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        padding: 0.75rem;
+        text-align: center;
+    }
+
+    .summary, .widget-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 1rem;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header li {
+        float: none;
+        display: block;
+        padding: 10px;
+    }
+
+    #contactForm {
+        flex-direction: column;
+    }
+
+    #contactForm input[type="email"], #contactForm button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .action-buttons button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
