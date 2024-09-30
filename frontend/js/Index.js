@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             nav.innerHTML = `
                 <li><a href="#">Inicio</a></li>
                 <li><a href="./Login.html">Iniciar Sesión</a></li>
-                <li><a href="./Register.html">Registrarse</a></li>
+                <li><a href="./Login.html#registerForm">Registrarse</a></li>
             `;
         }
     }
@@ -40,16 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función para cargar contenido dinámico
     function loadDynamicContent() {
-        const mainContent = document.querySelector('main');
-        // Aquí puedes cargar contenido dinámico desde tu API
-        // Por ahora, solo añadiremos un mensaje de ejemplo
-        const dynamicSection = document.createElement('section');
-        dynamicSection.className = 'dynamic-content';
+        // Selecciona el contenedor existente con la clase 'dynamic-content'
+        const dynamicSection = document.querySelector('.dynamic-content');
+    
+        // Añade el contenido dinámico dentro del contenedor existente
         dynamicSection.innerHTML = `
             <h2>Últimas Noticias</h2>
             <p>Bienvenido al Centro de Acopio de Carbón Térmico. Aquí encontrarás las últimas actualizaciones y noticias importantes.</p>
         `;
-        mainContent.appendChild(dynamicSection);
     }
 
     // Inicializar la página
@@ -69,3 +67,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+

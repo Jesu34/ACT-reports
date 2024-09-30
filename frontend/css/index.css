@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Variables de color */
+:root {
+    --primary-color: #35424a;
+    --secondary-color: #e8491d;
+    --light-color: #f4f4f4;
+    --dark-color: #333;
+    --white-color: #ffffff;
+    --grey-color: #ddd;
+    --light-shadow: rgba(0, 0, 0, 0.1);
+    --dark-shadow: rgba(0, 0, 0, 0.2);
+    --edit-color: #f39c12;
+    --delete-color: #e74c3c;
+    --lato-font: "Lato", sans-serif;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--lato-font);
+}
+
+header {
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--light-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--light-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+
+.hero {
+    background-image: url(../Imagenes/foto\ 1.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: var(--white-color);
+    text-align: center;
+    padding: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos para el contenido dinámico */
+.dynamic-content {
+    margin: 20px 0;
+    padding: 20px;
+    background: var(--white-color);
+    /* box-shadow: 0 0 10px var(--light-shadow); */
+}
+
+.dynamic-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Contacto */
+
+.contact {
+    background: var(--light-color);
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--light-shadow);
+    width: 80%;
+    margin-left: 8.5rem;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.contact-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--light-shadow);
+}
+
+.contact-text {
+    flex: 2;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 1rem;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--grey-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: darken(var(--secondary-color), 10%);
+}
+
+footer {
+    background: var(--secondary-color);
+    color: var(--white-color);
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 -4px 8px var(--dark-shadow);
+}
+
+footer p {
+    margin: 0;
+}
