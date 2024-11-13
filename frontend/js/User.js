@@ -28,9 +28,9 @@ function loadUsuarios() {
             <td>${usuario.email}</td>
             <td>${usuario.rol}</td>
             <td>
-                <div class="action-buttons">
-                    <button class="edit-btn" onclick="editUsuario(${usuario.id})">Editar</button>
-                    <button class="delete-btn" onclick="deleteUsuario(${usuario.id})">Eliminar</button>
+                 <div class="action-buttons">
+                    <button class="edit-btn" onclick="editActividad(${usuario.id})"><i class="fas fa-edit"></i> </button>
+                    <button class="delete-btn" onclick="deleteActividad(${usuario.id})"><i class="fas fa-trash"></i> </button>
                 </div>
             </td>
         `;

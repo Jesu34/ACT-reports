@@ -13,6 +13,8 @@
     --edit-color: #f39c12;
     --delete-color: #e74c3c;
     --lato-font: "Lato", sans-serif;
+    --edit-bottom:	#22e65c;
+    --delete-bottom: #ff0000;
 }
 
 * {
@@ -20,6 +22,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--lato-font);
+    overflow-x: hidden;
 }
 
 header {
@@ -85,91 +88,155 @@ h2 {
     margin-bottom: 1rem;
 }
 
-.form-section, .table-section {
-    margin-bottom: 2rem;
+/* Form */
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-label {
+.form-container {
+    display: flex;
+    background-color: var(--white-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--light-shadow);
+    max-width: 800px; /* Ajusta el ancho total del contenedor */
+    width: 100%;
+    gap: 20px;
+}
+
+.image-container {
+    width: 300px; /* Ancho de la animación */
+    height: 300px;
+}
+
+.form-content {
+    max-width: 400px; /* Ajusta el ancho del formulario */
+    width: 100%;
+}
+
+.form-content h2 {
+    margin-bottom: 10px;
+}
+
+form label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--dark-color);
-    font-weight: bold;
 }
 
-input[type="text"], textarea {
+form input,
+form select,
+form textarea {
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.5rem;
     margin-bottom: 1rem;
     border: 1px solid var(--grey-color);
     border-radius: 4px;
-    background-color: var(--white-color);
-    box-shadow: 0 2px 4px var(--light-shadow);
-    font-family: var(--lato-font);
-    color: var(--dark-color);
 }
 
-button[type="submit"] {
-    padding: 0.75rem 1.5rem;
+form button {
     background-color: var(--secondary-color);
     color: var(--white-color);
+    padding: 0.5rem 1rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: var(--lato-font);
+    transition: background-color 0.3s;
 }
 
-button[type="submit"]:hover {
-    background-color: var(--primary-color);
+form button:hover {
+    background-color: #2980b9;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 2px 4px var(--light-shadow);
+/* Table of contents */
+
+.table-section {
+    padding: 20px;
+    text-align: center;
 }
 
-th, td {
-    padding: 0.75rem;
-    text-align: left;
-    border-bottom: 1px solid var(--grey-color);
-}
-
-th {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-}
-
-td {
-    background-color: var(--white-color);
+.table-section h2 {
     color: var(--dark-color);
+    margin-bottom: 20px;
 }
 
-td .edit-btn {
-    background-color: var(--edit-color);
-    color: var(--white-color);
-    padding: 0.5rem 1rem;
+#materialesTable {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px var(--light-shadow);
+}
+
+#materialesTable thead {
+    background-color: var(--secondary-color); /* Color morado claro para el encabezado */
+    color: var(--light-color); /* Texto en color claro */
+}
+
+#materialesTable th,
+#materialesTable td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid var(--dark-color); /* Borde color oscuro */
+}
+
+#materialesTable th {
+    font-weight: bold;
+}
+
+#materialesTable tbody tr:nth-child(even) {
+    background-color: var(--grey-color); /* Color morado oscuro para las filas pares */
+    color: var(--dark-color); /* Texto en color claro */
+}
+
+#materialesTable tbody tr:nth-child(odd) {
+    background-color: var(--light-color); /* Color claro para las filas impares */
+    color: var(--dark-color); /* Texto en color oscuro */
+}
+
+#materialesTable tbody tr:hover {
+    background-color: var(--secondary-color); /* Color verde oscuro para el hover */
+    color: var(--light-color); /* Texto en color claro */
+    cursor: pointer;
+}
+
+#materialesTable td .action-buttons {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+#materialesTable td .edit-btn,
+#materialesTable td .delete-btn {
+    background-color: var(--dark-color); /* Color morado claro para los botones */
+    color: var(--grey-color); /* Texto en color claro */
+    padding: 8px 12px; /* Ajuste de padding */
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-right: 0.5rem;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center; /* Centra el ícono y el texto */
+    font-size: 16px; /* Tamaño de la fuente */
 }
 
-td .delete-btn {
-    background-color: var(--delete-color);
-    color: var(--white-color);
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+#materialesTable td .edit-btn i,
+#materialesTable td .delete-btn i {
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
 }
 
-td .edit-btn:hover {
-    background-color: darken(var(--edit-color), 10%);
+#materialesTable td .edit-btn:hover,
+#materialesTable td .delete-btn:hover {
+    background-color: var(--secondary-color); /* Cambio a color verde oscuro al pasar el cursor */
 }
 
-td .delete-btn:hover {
-    background-color: darken(var(--delete-color), 10%);
+#materialesTable td .edit-btn {
+    background-color: var(--edit-bottom); /* Color específico para el botón de editar */
+}
+
+#materialesTable td .delete-btn {
+    background-color: var(--delete-bottom); /* Color específico para el botón de eliminar */
 }
 
 footer {
@@ -183,4 +250,126 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+
+
+
+
+
+/* Breakpoint for Tablets and Larger (960px and above) */
+@media (min-width: 960px) {
+    .form-container {
+        max-width: 800px;
+    }
+
+    .image-container {
+        width: 300px; /* Ajuste de imagen para pantallas más grandes */
+    }
+
+    .form-content {
+        max-width: 400px;
+    }
+
+    #materialesTable {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+/* Breakpoint for Tablets (768px - 959px) */
+@media (min-width: 768px) and (max-width: 959px) {
+    header nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .form-container {
+        flex-direction: column; /* Cambiar la disposición a columna en pantallas medianas */
+        padding: 1.5rem;
+    }
+
+    .image-container {
+        width: 300px; /* Reducción del tamaño de la imagen */
+        height: 300px;
+    }
+
+    .form-content {
+        max-width: 100%; /* Formulario ocupa el 100% del espacio disponible */
+    }
+
+    #materialesTable {
+        width: 100%;
+        max-width: none; /* Se adapta completamente al ancho disponible */
+    }
+
+    #materialesTable td .action-buttons {
+        flex-direction: column; /* Apilar los botones de acción en pantallas medianas */
+        align-items: center;
+    }
+}
+
+/* Breakpoint for Smartphones (below 768px) */
+@media (max-width: 767px) {
+    header {
+        padding: 10px;
+    }
+
+    .form-container {
+        flex-direction: column; /* Colocar el formulario en columna */
+        gap: 10px;
+        padding: 1rem;
+    }
+
+    .image-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .form-content {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Reducir tamaño del título */
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Contenedor de la tabla con desplazamiento horizontal */
+    .table-section {
+        width: 100%;
+        overflow-x: auto; /* Activar desplazamiento solo horizontal */
+    }
+
+    #materialesTable {
+        width: 100%;
+        table-layout: auto; /* Ajusta la tabla al contenido */
+    }
+
+    #materialesTable th, #materialesTable td {
+        padding: 10px; /* Reducir padding en celdas */
+    }
+
+    #materialesTable td .action-buttons {
+        flex-direction: row; /* Disposición en fila de los botones */
+    }
+
+    #materialesTable td .edit-btn,
+    #materialesTable td .delete-btn {
+        padding: 6px 8px; /* Reducir tamaño de botones */
+        font-size: 14px; /* Reducir tamaño de texto */
+    }
+
+    footer {
+        font-size: 0.9rem; /* Reducir tamaño de texto en el footer */
+    }
 }

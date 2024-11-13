@@ -29,8 +29,8 @@ function loadMateriales() {
             <td>${material.unidad}</td>
             <td>
                 <div class="action-buttons">
-                    <button class="edit-btn" onclick="editMaterial(${material.id})">Editar</button>
-                    <button class="delete-btn" onclick="deleteMaterial(${material.id})">Eliminar</button>
+                    <button class="edit-btn" onclick="editActividad(${material.id})"><i class="fas fa-edit"></i> </button>
+                    <button class="delete-btn" onclick="deleteActividad(${material.id})"><i class="fas fa-trash"></i> </button>
                 </div>
             </td>
         `;

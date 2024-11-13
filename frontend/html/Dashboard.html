@@ -1,77 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Dashboard - Centro de Acopio</title>
     <link rel="stylesheet" href="../css/dashboard.css" />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="logo">Centro de Acopio</div>
-            <ul>
-                <li><a href="./Dashboard.html">Dashboard</a></li>
-                <li><a href="./Reports.html">Reportes</a></li>
-                <li><a href="./Activities.html">Actividades</a></li>
-                <li><a href="./Teams.html">Equipos</a></li>
-                <li><a href="./Materials.html">Materiales</a></li>
-                <li><a href="./Index.html" id="logout">Cerrar Sesión</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <div class="logo">Centro de Acopio</div>
+        <ul>
+            <li><a href="./Dashboard.html">Dashboard</a></li>
+            <li><a href="./Reports.html">Reportes</a></li>
+            <li><a href="./Activities.html">Actividades</a></li>
+            <li><a href="./Materials.html">Materiales</a></li>
+            <li><a href="./Users.html">Usuarios</a></li>
+            <li>
+          <li>
+            <a href="./Login.html" id="logout"
+              ><i class="fa-solid fa-right-from-bracket"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <h1>Dashboard</h1>
-        <section class="summary">
-            <h2>Resumen</h2>
-            
-                <!-- Nueva sección con cuatro tarjetas diferentes -->
-                <div class="widget" id="otra-tarjeta-1">
-                    <h3>Otra Tarjeta 1</h3>
-                    <p class="count">0</p>
-                </div>
-                <div class="widget" id="otra-tarjeta-2">
-                    <h3>Otra Tarjeta 2</h3>
-                    <p class="count">0</p>
-                </div>
-                <div class="widget" id="otra-tarjeta-3">
-                    <h3>Otra Tarjeta 3</h3>
-                    <p class="count">0</p>
-                </div>
-                <div class="widget" id="otra-tarjeta-4">
-                    <h3>Otra Tarjeta 4</h3>
-                    <p class="count">0</p>
-                </div>
-            </div>
-        </section>
-        
+      <h1>Dashboard</h1>
+      <section class="summary">
+        <h2>Resumen</h2>
+      </section>
 
-        <section class="recent-reports">
-            <h2>Reportes Recientes</h2>
-            <table id="recentReportsTable">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Fecha</th>
-                        <th>Usuario</th>
-                        <th>Actividad</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Aquí se cargarán dinámicamente los reportes recientes -->
-                </tbody>
-            </table>
-        </section>
+      <section class="recent-reports">
+        <h1>Reportes Recientes</h1>
+        <table id="recentReportsTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Fecha</th>
+              <th>Usuario</th>
+              <th>Actividad</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
     </main>
 
     <footer>
-        <p>
-            &copy; 2024 Bitacora de Actividades del Centro de Acopio de Carbón
-            Térmico. Todos los derechos reservados.
-        </p>
+      <p>
+        &copy; 2024 Bitacora de Actividades del Centro de Acopio de Carbón
+        Térmico. Todos los derechos reservados.
+      </p>
     </footer>
 
     <script src="/Frontend/Js/dashboard.js"></script>
-</body>
+  </body>
 </html>

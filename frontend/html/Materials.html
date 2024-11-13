@@ -1,65 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Materiales - Centro de Acopio</title>
-    <link rel="stylesheet" href="../css/materials.css">
-</head>
-<body style background="">
+    <link rel="stylesheet" href="../css/materials.css" />
+  </head>
+  <body style background="">
     <header>
-        <nav>
-            <div class="logo">Centro de Acopio</div>
-            <ul>
-                <li><a href="./dashboard.html">Dashboard</a></li>
-                <li><a href="./reportes.html">Reportes</a></li>
-                <li><a href="./actividades.html">Actividades</a></li>
-                <li><a href="./equipos.html">Equipos</a></li>
-                <li><a href="./materiales.html">Materiales</a></li>
-                <li><a href="./usuarios.html">Usuarios</a></li>
-                <li><a href="#" id="logout">Cerrar Sesión</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <div class="logo">Centro de Acopio</div>
+        <ul>
+          <li><a href="./Dashboard.html">Dashboard</a></li>
+          <li><a href="./Reports.html">Reportes</a></li>
+          <li><a href="./Activities.html">Actividades</a></li>
+          <li><a href="./Materials.html">Materiales</a></li>
+          <li><a href="./Users.html">Usuarios</a></li>
+          <li><a href="./Login.html" id="logout"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+        </ul>
+      </nav>
     </header>
 
     <main class="container">
-        <h1>Gestión de Materiales</h1>
-        
-        <section class="form-section">
-            <h2>Agregar/Editar Material</h2>
-            <form id="materialForm">
-                <input type="hidden" id="materialId">
-                <label for="nombreMaterial">Nombre:</label>
-                <input type="text" id="nombreMaterial" required>
-                <label for="descripcionMaterial">Descripción:</label>
-                <textarea id="descripcionMaterial" rows="3"></textarea>
-                <button type="submit">Guardar Material</button>
-            </form>
-        </section>
+      <h1>Gestión de Materiales</h1>
 
-        <section class="table-section">
-            <h2>Lista de Materiales</h2>
-            <table id="materialesTable">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Descripción</th>
-                        <th>Peso</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Aquí se cargarán dinámicamente los materiales -->
-                </tbody>
-            </table>
-        </section>
+      <!-- <section class="form-section">
+        <h2>Agregar/Editar Material</h2>
+        <form id="materialForm">
+          <input type="hidden" id="materialId" />
+          <label for="nombreMaterial">Nombre:</label>
+          <input type="text" id="nombreMaterial" required />
+          <label for="descripcionMaterial">Descripción:</label>
+          <textarea id="descripcionMaterial" rows="3"></textarea>
+          <button type="submit">Guardar Material</button>
+        </form>
+      </section> -->
+
+      <section class="form-section">
+        <!-- Contenedor del formulario y la animación -->
+        <div class="form-container">
+          <!-- Contenedor de la imagen dentro del formulario -->
+          <div class="image-container">
+            <dotlottie-player
+              src="https://lottie.host/3ed3249b-c7c5-4cd7-9ff8-d40068eaabde/9IYf8kVOXp.json"
+              background="transparent"
+              speed="1"
+              style="width: 300px; height: 300px"
+              loop
+              autoplay
+            ></dotlottie-player>
+          </div>
+
+          <!-- Contenedor del formulario -->
+          <div class="form-content">
+            <h2>Agregar Material</h2>
+            <form id="materialForm">
+              <input type="hidden" id="materialId" />
+              <label for="nombreMaterial">Nombre:</label>
+              <input type="text" id="nombreMaterial" required />
+              <label for="descripcionMaterial">Descripción:</label>
+              <textarea id="descripcionMaterial" rows="3"></textarea>
+              <button type="submit">Guardar Material</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="table-section">
+        <h2>Lista de Materiales</h2>
+        <table id="materialesTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Peso</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Aquí se cargarán dinámicamente los materiales -->
+          </tbody>
+        </table>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Bitacora de Actividades del Centro de Acopio de Carbón Térmico. Todos los derechos reservados.</p>
+      <p>
+        &copy; 2024 Bitacora de Actividades del Centro de Acopio de Carbón
+        Térmico. Todos los derechos reservados.
+      </p>
     </footer>
 
     <script src="/Frontend/Js/Materials.js"></script>
-</body>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+  </body>
 </html>

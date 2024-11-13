@@ -1,53 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Reportes - Centro de Acopio</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body style background="/frontend/Imagenes/foto 5.jpg">
+    <link rel="stylesheet" href="../css/reports.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="logo">Centro de Acopio</div>
-            <ul>
-                <li><a href="./dashboard.html">Dashboard</a></li>
-                <li><a href="./reportes.html">Reportes</a></li>
-                <li><a href="./Activities.html">Actividades</a></li>
-                <li><a href="./equipos.html">Equipos</a></li>
-                <li><a href="./materiales.html">Materiales</a></li>
-                <li><a href="./usuarios.html">Usuarios</a></li>
-                <li><a href="#" id="logout">Cerrar Sesión</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <div class="logo">Centro de Acopio</div>
+        <ul>
+          <li><a href="./Dashboard.html">Dashboard</a></li>
+          <li><a href="./Reports.html">Reportes</a></li>
+          <li><a href="./Activities.html">Actividades</a></li>
+          <li><a href="./Materials.html">Materiales</a></li>
+          <li><a href="./Users.html">Usuarios</a></li>
+          <li>
+            <a href="./Login.html" id="logout"
+              ><i class="fa-solid fa-right-from-bracket"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main class="container">
-        <h1>Reportes</h1>
+      <h1>Reportes</h1>
 
-        <section class="report-table-section">
-            <h2>Lista de Reportes</h2>
-            <table id="reportesTable">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Fecha</th>
-                        <th>Tipo</th>
-                        <th>Descripción</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Aquí se cargarán dinámicamente los reportes -->
-                </tbody>
-            </table>
-        </section>
+      <section class="report-table-section">
+        <h2>Lista de Reportes</h2>
+        <table id="reportesTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Fecha</th>
+              <th>Tipo</th>
+              <th>Descripción</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Aquí se cargarán dinámicamente los reportes -->
+          </tbody>
+        </table>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Centro de Acopio de Carbón Térmico. Todos los derechos reservados.</p>
+      <p>
+        &copy; 2024 Centro de Acopio de Carbón Térmico. Todos los derechos
+        reservados.
+      </p>
     </footer>
 
     <script src="/Frontend/Js/Reports.js"></script>
-</body>
+  </body>
 </html>
