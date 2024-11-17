@@ -42,6 +42,7 @@ nav {
 nav ul {
   display: flex;
   list-style: none;
+  transition: all 0.3s ease;
 }
 
 nav ul li {
@@ -57,6 +58,16 @@ nav ul li a {
 
 nav ul li a:hover {
   color: var(--primary-color);
+}
+
+/* Estilos para el boton del menú */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--light-color);
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 main {
@@ -240,3 +251,90 @@ footer {
 footer p {
   margin: 0;
 }
+
+/* Breakpoint for Smartphones (below 768px) */
+@media (max-width: 767px) {
+  header {
+      padding: 10px;
+  }
+
+  #menu-toggle {
+      display: block;
+  }
+
+  nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      background-color: var(--secondary-color);
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      z-index: 10;
+  }
+
+  nav ul.show {
+      display: flex;
+  }
+
+  nav ul li {
+      margin: 15px 0;
+  }
+
+  .form-container {
+      flex-direction: column; /* Colocar el formulario en columna */
+      gap: 10px;
+      padding: 1rem;
+  }
+
+  .image-container {
+      width: 300px;
+      height: 300px;
+  }
+
+  .form-content {
+      max-width: 100%;
+      width: 100%;
+  }
+
+  h1 {
+      font-size: 1.8rem; /* Reducir tamaño del título */
+  }
+
+  h2 {
+      font-size: 1.2rem;
+  }
+
+  /* Contenedor de la tabla con desplazamiento horizontal */
+  .recent-reports {
+      width: 100%;
+      overflow-x: auto; /* Activar desplazamiento solo horizontal */
+  }
+
+  #recentReportsTable {
+      width: 100%;
+      table-layout: auto; /* Ajusta la tabla al contenido */
+  }
+
+  #recentReportsTable th, #recentReportsTable td {
+      padding: 10px; /* Reducir padding en celdas */
+  }
+
+  #recentReportsTable td .action-buttons {
+      flex-direction: row; /* Disposición en fila de los botones */
+  }
+
+  #recentReportsTable td .edit-btn,
+  #recentReportsTable td .delete-btn {
+      padding: 6px 8px; /* Reducir tamaño de botones */
+      font-size: 14px; /* Reducir tamaño de texto */
+  }
+
+  footer {
+      font-size: 0.9rem; /* Reducir tamaño de texto en el footer */
+  }
+}
+
